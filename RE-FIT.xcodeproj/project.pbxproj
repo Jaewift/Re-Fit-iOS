@@ -20,6 +20,7 @@
 		C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B548322A4DDE49001B3F62 /* CommunityViewController.swift */; };
 		C7B548352A4DDE75001B3F62 /* ClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */; };
 		C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */; };
+		C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B778C22A4E83FC00494CEC /* APIURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C7B548322A4DDE49001B3F62 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesViewController.swift; sourceTree = "<group>"; };
 		C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
+		C7B778C22A4E83FC00494CEC /* APIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		C79B5AA02A4D605A00A8B485 /* RE-FIT */ = {
 			isa = PBXGroup;
 			children = (
+				C7B778C12A4E83A300494CEC /* Network */,
 				C7B5483A2A4DDFBD001B3F62 /* MyHome */,
 				C7B548392A4DDFB5001B3F62 /* Clothes */,
 				C7B548382A4DDFA2001B3F62 /* Community */,
@@ -110,6 +113,14 @@
 				C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */,
 			);
 			path = MyHome;
+			sourceTree = "<group>";
+		};
+		C7B778C12A4E83A300494CEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C7B778C22A4E83FC00494CEC /* APIURL.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
+				C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,
 				C7B548352A4DDE75001B3F62 /* ClothesViewController.swift in Sources */,
 				C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */,
