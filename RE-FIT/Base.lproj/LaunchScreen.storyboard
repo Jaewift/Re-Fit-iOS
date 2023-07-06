@@ -35,7 +35,7 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RE-FIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-IU-pO9">
-                                <rect key="frame" x="159.66666666666666" y="806" width="74" height="30"/>
+                                <rect key="frame" x="159.66666666666666" y="802" width="74" height="30"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
                                 <color key="textColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,7 +88,7 @@
                             <constraint firstItem="nlS-JR-3cY" firstAttribute="top" secondItem="7hX-tU-fjQ" secondAttribute="bottom" constant="95" id="SKv-MP-ppx"/>
                             <constraint firstItem="1sf-hs-QJG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="339" id="XyA-nB-Kpa"/>
                             <constraint firstItem="1sf-hs-QJG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-54" id="boR-Ne-iem"/>
-                            <constraint firstAttribute="bottom" secondItem="ibJ-IU-pO9" secondAttribute="bottom" constant="16" id="bz0-7s-MGM"/>
+                            <constraint firstAttribute="bottom" secondItem="ibJ-IU-pO9" secondAttribute="bottom" constant="20" id="bz0-7s-MGM"/>
                             <constraint firstAttribute="trailing" secondItem="YkM-Zf-UH0" secondAttribute="trailing" constant="-41" id="eaG-o2-KfN"/>
                             <constraint firstItem="YkM-Zf-UH0" firstAttribute="top" secondItem="7Z2-Vq-Wv6" secondAttribute="bottom" constant="28" id="mCM-xS-1OE"/>
                             <constraint firstItem="7Z2-Vq-Wv6" firstAttribute="leading" secondItem="1sf-hs-QJG" secondAttribute="trailing" constant="17" id="mU8-Cn-qLu"/>

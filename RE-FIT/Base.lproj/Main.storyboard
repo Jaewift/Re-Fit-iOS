@@ -44,7 +44,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sc6-bY-0UG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Ifu-tc-TXE" kind="relationship" relationship="viewControllers" id="Pah-YX-7LD"/>
@@ -56,11 +57,13 @@
             </objects>
             <point key="canvasLocation" x="296.94656488549617" y="-410.56338028169017"/>
         </scene>
-        <!--Item-->
+        <!--커뮤니티-->
         <scene sceneID="UoO-nh-1Cf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ifu-tc-TXE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up" catalog="system" id="yfs-ou-5um"/>
+                    <tabBarItem key="tabBarItem" title="커뮤니티" image="Community" id="yfs-ou-5um">
+                        <color key="badgeColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="of2-tn-vkk">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -75,11 +78,13 @@
             </objects>
             <point key="canvasLocation" x="1375" y="-1089"/>
         </scene>
-        <!--Item-->
+        <!--옷장-->
         <scene sceneID="HBa-yJ-01e">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8q-my-42m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.up.circle.fill" catalog="system" id="PAk-zj-shp"/>
+                    <tabBarItem key="tabBarItem" title="옷장" image="Clothes" id="PAk-zj-shp">
+                        <color key="badgeColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7wy-ed-Ocp">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -94,11 +99,13 @@
             </objects>
             <point key="canvasLocation" x="1375" y="-411"/>
         </scene>
-        <!--Item-->
+        <!--마이-->
         <scene sceneID="XwW-zg-A5t">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y3D-MC-ZHd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="square.and.arrow.down.on.square.fill" catalog="system" id="DsC-n0-JHh"/>
+                    <tabBarItem key="tabBarItem" title="마이" image="Myhome" id="DsC-n0-JHh">
+                        <color key="badgeColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qx5-Ib-B3V">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -115,8 +122,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="Clothes" width="25.5" height="25"/>
+        <image name="Community" width="22" height="22"/>
+        <image name="Myhome" width="25.5" height="25"/>
     </resources>
 </document>
