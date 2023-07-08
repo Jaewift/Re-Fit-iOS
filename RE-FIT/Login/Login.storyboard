@@ -253,7 +253,7 @@
         <!--Join View Controller-->
         <scene sceneID="p4u-1d-xf1">
             <objects>
-                <viewController storyboardIdentifier="JoinViewController" modalPresentationStyle="fullScreen" id="mT0-65-tLi" customClass="JoinViewController" customModule="RE_FIT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinVC" modalPresentationStyle="fullScreen" id="mT0-65-tLi" customClass="JoinViewController" customModule="RE_FIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R19-PD-RDg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,7 +307,7 @@
                                     <constraint firstAttribute="height" constant="37" id="GEd-lQ-F7d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
                                         <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -361,6 +361,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Eye_Icon"/>
+                                <connections>
+                                    <action selector="ShowPassword:" destination="mT0-65-tLi" eventType="touchUpInside" id="3kg-17-YyW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhX-c7-C7Z">
                                 <rect key="frame" x="311" y="371" width="42" height="35"/>
@@ -408,6 +411,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Check_Icon"/>
+                                <connections>
+                                    <action selector="CheckTapped:" destination="mT0-65-tLi" eventType="touchUpInside" id="HNJ-Np-h9r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[필수] 이용약관 및 개인정보 수집 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIH-w0-7gk">
                                 <rect key="frame" x="73" y="590" width="180" height="15"/>
@@ -426,6 +432,9 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                     <color key="baseForegroundColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="ShowAgree:" destination="mT0-65-tLi" eventType="touchUpInside" id="7da-06-3BO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY6-Bz-jz1">
                                 <rect key="frame" x="298" y="603" width="42" height="0.66666666666662877"/>
@@ -502,21 +511,105 @@
                             <constraint firstItem="46j-Ra-tiy" firstAttribute="top" secondItem="2Cv-1Y-xhA" secondAttribute="bottom" constant="28" id="yDX-IC-N2B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BDTextField" destination="2Cv-1Y-xhA" id="o69-j7-si4"/>
+                        <outlet property="CheckButton" destination="46j-Ra-tiy" id="tff-BM-ru3"/>
+                        <outlet property="EmailTextField" destination="ZX0-Ba-4HX" id="0gv-3v-9m2"/>
+                        <outlet property="EyeButton" destination="tq1-ns-4aL" id="jmf-yZ-ONe"/>
+                        <outlet property="IDTextField" destination="fRB-2L-hdS" id="2ch-7s-1wN"/>
+                        <outlet property="NameTextField" destination="tIa-Ea-LBy" id="esm-yU-hZz"/>
+                        <outlet property="PWTextField" destination="3Fd-7i-vYX" id="ecD-aw-SOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sr-pr-jvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1834.3511450381679" y="-364.08450704225356"/>
         </scene>
-        <!--View Controller-->
+        <!--Agree View Controller-->
         <scene sceneID="qAY-Ss-Ohl">
             <objects>
-                <viewController id="Ku8-S7-Kld" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AgreeVC" modalPresentationStyle="fullScreen" id="Ku8-S7-Kld" customClass="AgreeViewController" customModule="RE_FIT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xW4-Ca-zKx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rn-7F-SER">
+                                <rect key="frame" x="81.666666666666686" y="348" width="230" height="156"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcb-He-2pM">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="37"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용약관 및 개인정보 수집 동의 (필수)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-NC-oub">
+                                                <rect key="frame" x="11" y="11" width="180" height="15"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                <color key="textColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwb-Sw-atL">
+                                                <rect key="frame" x="199" y="5" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="9Rm-TP-AX8"/>
+                                                    <constraint firstAttribute="width" constant="25" id="FXJ-82-A4P"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Undo_Icon"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="Ku8-S7-Kld" eventType="touchUpInside" id="X02-SC-gAO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94133394960000005" green="0.9487617612" blue="0.96078616380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mwb-Sw-atL" secondAttribute="trailing" constant="6" id="6SD-mD-RMq"/>
+                                            <constraint firstAttribute="height" constant="37" id="DT4-1f-TxU"/>
+                                            <constraint firstItem="Cu3-NC-oub" firstAttribute="top" secondItem="Fcb-He-2pM" secondAttribute="top" constant="11" id="ER1-nB-nan"/>
+                                            <constraint firstItem="mwb-Sw-atL" firstAttribute="top" secondItem="Fcb-He-2pM" secondAttribute="top" constant="5" id="Nqt-re-ihZ"/>
+                                            <constraint firstItem="Cu3-NC-oub" firstAttribute="leading" secondItem="Fcb-He-2pM" secondAttribute="leading" constant="11" id="T9h-VF-5iu"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개정일자: 2023.06.11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yb1-LE-bFp">
+                                        <rect key="frame" x="11" y="55" width="86" height="12"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gt-dL-vdT">
+                                        <rect key="frame" x="11" y="80" width="187" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="187" id="5vU-91-XuH"/>
+                                            <constraint firstAttribute="height" constant="60" id="ni5-OD-fB0"/>
+                                        </constraints>
+                                        <string key="text">제1조 (목적)
+이 약관은 RE-FIT ( 이하 ‘ 회사 ’ 라고 합니다 )이 제공하는 제반 서비스의 이용과 관련하여 회사와 회원과의 관리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</string>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Fcb-He-2pM" secondAttribute="trailing" id="3Uq-eG-XWJ"/>
+                                    <constraint firstItem="3gt-dL-vdT" firstAttribute="top" secondItem="yb1-LE-bFp" secondAttribute="bottom" constant="13" id="BYR-9c-aOf"/>
+                                    <constraint firstItem="yb1-LE-bFp" firstAttribute="top" secondItem="Fcb-He-2pM" secondAttribute="bottom" constant="18" id="Dba-7U-cqr"/>
+                                    <constraint firstItem="yb1-LE-bFp" firstAttribute="leading" secondItem="1rn-7F-SER" secondAttribute="leading" constant="11" id="Dve-9H-0qU"/>
+                                    <constraint firstAttribute="width" constant="230" id="JzJ-Ni-XRC"/>
+                                    <constraint firstItem="Fcb-He-2pM" firstAttribute="top" secondItem="1rn-7F-SER" secondAttribute="top" id="UBW-jX-9hn"/>
+                                    <constraint firstItem="Fcb-He-2pM" firstAttribute="leading" secondItem="1rn-7F-SER" secondAttribute="leading" id="V93-7o-UTA"/>
+                                    <constraint firstItem="3gt-dL-vdT" firstAttribute="leading" secondItem="1rn-7F-SER" secondAttribute="leading" constant="11" id="gpc-Or-VQS"/>
+                                    <constraint firstAttribute="height" constant="156" id="jvX-XF-0Nb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fza-VO-mwU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1rn-7F-SER" firstAttribute="centerX" secondItem="xW4-Ca-zKx" secondAttribute="centerX" id="8gQ-6g-ObB"/>
+                            <constraint firstItem="1rn-7F-SER" firstAttribute="centerY" secondItem="xW4-Ca-zKx" secondAttribute="centerY" id="jLG-8G-FWF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="AgreeView" destination="1rn-7F-SER" id="mti-yn-cgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vqg-Ye-NO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -546,6 +639,7 @@
         <image name="Eye_Icon" width="16" height="14.5"/>
         <image name="Kakao_Login" width="296" height="50"/>
         <image name="RE-FIT_SmallLogo" width="159.5" height="166"/>
+        <image name="Undo_Icon" width="12" height="13"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
